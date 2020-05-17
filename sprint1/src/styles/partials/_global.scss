@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: unset;
+}
+
+@include large {
+  .page__flex {
+    display: flex;
+  }
+  .page__videos {
+    border-left: 1px solid $mercury;
+  }
+  .comment__container {
+    padding-bottom: 1.5rem;
+  }
+}

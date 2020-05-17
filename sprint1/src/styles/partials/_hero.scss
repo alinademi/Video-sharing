@@ -1,0 +1,33 @@
+.hero {
+  background-color: $black;
+  height: 56vw;
+  &__video {
+    width: 100%;
+    height: 56vw;
+    &:focus {
+      outline-width: 0;
+    }
+  }
+}
+
+@include medium {
+  .hero {
+    display: flex;
+    justify-content: center;
+    height: 50vw;
+    &__video {
+      height: 50vw;
+      width: 90vw;
+    }
+  }
+}
+
+@include large {
+  .hero {
+    height: 33.75rem;
+    &__video {
+      width: 59rem;
+      height: 33.75rem;
+    }
+  }
+}

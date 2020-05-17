@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "avenir-regular";
+  src: url("../assets/Fonts/AvenirNextProLT/AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "avenir-demi";
+  src: url("../assets/Fonts/AvenirNextProLT/AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: "avenir-bold";
+  src: url("../assets/Fonts/AvenirNextProLT/AvenirNextLTPro-Bold.otf");
+}
+
+@mixin mobile-header {
+  font-family: "avenir-bold";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: $black;
+}
+@mixin mobile-sub {
+  font-family: "avenir-demi";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: $black;
+}
+
+@mixin mobile-para {
+  font-family: "avenir-regular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: $black;
+}
+
+//////////////////tab/desk typography/////////////////
+@mixin hero-header {
+  font-family: "avenir-bold";
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  color: $black;
+}
+@mixin h1-header {
+  font-family: "avenir-bold";
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  color: $black;
+}
+@mixin h2-header {
+  font-family: "avenir-bold";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: $black;
+}
+@mixin h3-sub {
+  font-family: "avenir-demi";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: $black;
+}
+@mixin h4-para {
+  font-family: "avenir-regular";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: $black;
+}
