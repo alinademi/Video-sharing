@@ -74,17 +74,20 @@ class App extends React.Component {
         <Header />
         <MainVideo />
         <div className="main-wrapper">
-          <Intro currentVideoInfo={this.state.currentVideo} />
-          <CommentsForm />
-          <ul className="comment__container">
-            <PostedComments
-              postedComments={this.state.currentVideo[0].comments}
-            />
-          </ul>
+          <div>
+            <Intro currentVideoInfo={this.state.currentVideo} />
+            <CommentsForm />
+            <ul className="comment__container">
+              <PostedComments
+                postedComments={this.state.currentVideo[0].comments}
+              />
+            </ul>
+          </div>
+
+          <aside className="upnext">
+            <Videos sideVideos={this.state.sideVideos} />
+          </aside>
         </div>
-        <aside className="upnext">
-          <Videos sideVideos={this.state.sideVideos} />
-        </aside>
       </div>
     );
   }

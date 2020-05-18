@@ -1,0 +1,85 @@
+/*MOBILE SIZING*/
+.comment__container {
+  margin: 0 1rem;
+}
+.posted-comments {
+  font-family: "avenir-demi";
+  width: 100%;
+  color: $black;
+  border-bottom: 2px solid $mercury;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+
+  &__image {
+    height: 3rem;
+    min-width: 3rem;
+    background-color: $mercury;
+    border-radius: 2rem;
+    align-self: flex-start;
+    margin-right: 12px;
+  }
+  &__name {
+    font-size: 0.875rem;
+    margin-right: auto;
+    padding-bottom: 1rem;
+    width: 49vw;
+  }
+  &__time {
+    font-family: "avenir-regular";
+    color: $silver;
+  }
+  &__comment {
+    font-family: "avenir-regular";
+  }
+}
+.posted-comments__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 72vw;
+}
+/*TABLET SIZING*/
+@include medium {
+  .comment__container {
+    margin: 0 1.5rem;
+  }
+  .posted-comments {
+    justify-content: left;
+    flex-direction: row;
+    width: 720px;
+    padding-left: unset;
+    padding-right: unset;
+
+    &__name {
+      margin: 0;
+      padding-right: 1rem;
+      width: unset;
+    }
+    &__image {
+      margin-right: 1rem;
+      min-width: 3rem;
+    }
+    &__comment {
+      width: 624px;
+    }
+    &__container {
+      justify-content: flex-start;
+    }
+  }
+}
+/*DESKTOP SIZING*/
+@include large {
+  .posted-comments {
+    margin-left: 11.25rem;
+    margin-right: unset;
+    width: 44.5rem;
+    padding-left: unset;
+    padding-right: unset;
+  }
+  .comment__container {
+    margin: unset;
+  }
+}
