@@ -6,10 +6,10 @@
 }
 
 @include large {
-  .page__flex {
+  .main-wrapper {
     display: flex;
   }
-  .page__videos {
+  .upnext {
     border-left: 1px solid $mercury;
   }
   .comment__container {

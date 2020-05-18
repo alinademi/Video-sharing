@@ -30,7 +30,7 @@
       width: inherit;
       height: 46.5px;
       margin-right: 5px;
-      @include mobile-sub;
+      @include mobile-sub-header;
       font-family: "avenir-regular";
       border: none;
       &:focus {
@@ -48,7 +48,7 @@
       background-color: $brainflixblue;
       border: none;
       border-radius: 0.25rem;
-      @include mobile-para;
+      @include mobile-paragraph;
       color: $white;
       &:focus {
         outline-width: 0;

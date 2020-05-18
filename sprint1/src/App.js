@@ -1,6 +1,7 @@
 import "./styles/main.css";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
+import MainVideo from "./components/MainVideo";
+import Intro from "./components/Intro";
 import React from "react";
 
 class App extends React.Component {
@@ -62,11 +63,38 @@ class App extends React.Component {
       },
     ],
   };
+
+  // const comment = [
+  //   {
+  //     name: "Michael Lyons",
+  //     date: "01/14/2020",
+  //     comment:
+  //       "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.",
+  //   },
+  //   {
+  //     name: "Gary Wong",
+  //     date: "01/01/2020",
+  //     comment:
+  //       "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
+  //   },
+  //   {
+  //     name: "Theodore Duncan",
+  //     date: "12/13/2019",
+  //     comment:
+  //       "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Every time I see him I feel instantly happy! He’s definitely my favorite ever!",
+  //   },
+  // ];
+
   render() {
     return (
       <div>
         <Header />
-        <Hero />
+        <MainVideo />
+        <div className="main-wrapper">
+          <Intro currentVideoInfo={this.state.currentVideo} />
+          <div className="comment__container">comments sit here</div>
+        </div>
+        <aside className="upnext">side videos goes here</aside>
       </div>
     );
   }

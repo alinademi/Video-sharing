@@ -1,29 +1,30 @@
-.hero {
+/*MOBILE SIZING*/
+.main-video {
   background-color: $black;
-  height: 56vw;
+  height: 57.19vw;
   &__video {
     width: 100%;
-    height: 56vw;
+    height: 57.19vw;
     &:focus {
       outline-width: 0;
     }
   }
 }
-
+/*TABLET SIZING*/
 @include medium {
-  .hero {
+  .main-video {
     display: flex;
     justify-content: center;
-    height: 50vw;
+    height: 52.084vw;
     &__video {
-      height: 50vw;
-      width: 90vw;
+      height: 52.084vw;
+      width: 91.147vw;
     }
   }
 }
-
+/*DESKTOP SIZING*/
 @include large {
-  .hero {
+  .main-video {
     height: 33.75rem;
     &__video {
       width: 59rem;

@@ -19,14 +19,14 @@
   line-height: 2rem;
   color: $black;
 }
-@mixin mobile-sub {
+@mixin mobile-sub-header {
   font-family: "avenir-demi";
   font-size: 0.875rem;
   line-height: 1.375rem;
   color: $black;
 }
 
-@mixin mobile-para {
+@mixin mobile-paragraph {
   font-family: "avenir-regular";
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -52,13 +52,13 @@
   line-height: 2rem;
   color: $black;
 }
-@mixin h3-sub {
+@mixin h3-sub-header {
   font-family: "avenir-demi";
   font-size: 1rem;
   line-height: 1.5rem;
   color: $black;
 }
-@mixin h4-para {
+@mixin h4-paragraphgraph {
   font-family: "avenir-regular";
   font-size: 0.875rem;
   line-height: 1.375rem;
