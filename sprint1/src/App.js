@@ -2,6 +2,7 @@ import "./styles/main.css";
 import React from "react";
 import Header from "./components/Header";
 import MainVideo from "./components/MainVideo";
+import Videos from "./components/Videos";
 import Intro from "./components/Intro";
 import CommentsForm from "./components/CommentsForm";
 import PostedComments from "./components/PostedComments";
@@ -81,7 +82,9 @@ class App extends React.Component {
             />
           </ul>
         </div>
-        <aside className="upnext">side videos goes here</aside>
+        <aside className="upnext">
+          <Videos sideVideos={this.state.sideVideos} />
+        </aside>
       </div>
     );
   }
