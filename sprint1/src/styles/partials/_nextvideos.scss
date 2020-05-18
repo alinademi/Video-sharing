@@ -1,0 +1,55 @@
+.upnext {
+  border-left: 1px solid $mercury;
+}
+/*MOBILE SIZING*/
+.video {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+
+  &__next {
+    font-family: "avenir-demi";
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: $silver;
+    padding: 2.5rem 0;
+  }
+  &__link {
+    display: flex;
+    padding-bottom: 1.5rem;
+  }
+  &__image {
+    width: 7.5rem;
+    height: 4.375rem;
+    margin-right: 1rem;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  &__sub {
+    &-title {
+      @include mobile-sub-header;
+      padding-bottom: 1rem;
+      line-height: 1.1rem;
+      width: 9.5rem;
+    }
+    &-name {
+      @include mobile-paragraph;
+      font-size: 0.875rem;
+    }
+  }
+}
+/*TABLET SIZING*/
+@include medium {
+  .video__sub-title {
+    width: 11rem;
+  }
+}
+/*DESKTOP SIZING*/
+@include large {
+  .video {
+    padding-right: 11.25rem;
+  }
+  .upnext {
+    border-left: 2px solid $mercury;
+  }
+}
