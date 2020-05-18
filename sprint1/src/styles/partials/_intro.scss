@@ -54,7 +54,7 @@
     &__info {
       padding: 1.5rem 0;
       &-author {
-        @include h3-sub;
+        @include h3-sub-header;
       }
     }
     &__date {
@@ -67,6 +67,19 @@
     &__description {
       @include h4-paragraph;
       width: 33rem;
+    }
+  }
+}
+
+/*DESKTOP SIZING*/
+@include large {
+  .intro {
+    margin-left: 11.25rem;
+    width: 44.5rem;
+    padding-right: unset;
+    padding-left: unset;
+    &__likes-num {
+      padding-right: 2rem;
     }
   }
 }
