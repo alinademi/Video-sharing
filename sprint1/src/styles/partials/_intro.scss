@@ -39,3 +39,34 @@
     padding-top: 1.5rem;
   }
 }
+/*TABLET SIZING*/
+@include medium {
+  .intro {
+    padding: 3rem 1.5rem 4rem 1.5rem;
+    &__title {
+      @include h1-header;
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__info {
+      padding: 1.5rem 0;
+      &-author {
+        @include h3-sub;
+      }
+    }
+    &__date {
+      @include h4-paragraph;
+      color: $silver;
+    }
+    &__counts {
+      padding: 1.5rem 0;
+    }
+    &__description {
+      @include h4-paragraph;
+      width: 33rem;
+    }
+  }
+}
