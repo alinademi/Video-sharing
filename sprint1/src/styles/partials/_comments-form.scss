@@ -1,4 +1,10 @@
-/*MOBILE SIZING*/
+/*
+===================================================
+   comment fom
+===================================================
+*/
+
+/*MOBILE SIZING*/ //////////////////////////////////
 .comment-form {
   background-color: $white;
   padding: 0 1rem;
@@ -72,7 +78,7 @@
   }
 }
 
-/*TABLET SIZING*/
+/*TABLET SIZING*/ //////////////////////////////////
 @include medium {
   .comment-form {
     padding: 0 1.5rem 0 1.5rem;
@@ -97,10 +103,10 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: flex-start; //////////////////////////
+      justify-content: flex-start;
       padding: unset;
-      flex-wrap: wrap; //////////////////
-      flex: 1; /////////////////////
+      flex-wrap: wrap;
+      flex: 1;
     }
     &__input {
       height: 3rem;
@@ -114,10 +120,12 @@
       margin-top: 0;
     }
     &__label {
-      flex-basis: 100%; ///////////////////////////
+      flex-basis: 100%;
     }
   }
 }
+
+/*ABOVE TABLET SIZING*/ //////////////////////////////////
 @include above-tablet {
   .comment-form {
     &__input {
@@ -125,7 +133,8 @@
     }
   }
 }
-/*DESKTOP SIZING*/
+
+/*DESKTOP SIZING*/ //////////////////////////////////
 @include large {
   .comment-form {
     // margin-left: 11.25rem;

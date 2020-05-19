@@ -1,4 +1,10 @@
-/*MOBILE SIZING*/
+/*
+===================================================
+   INTRODUCTION TEXT UNDER MAIN VIDEO
+===================================================
+*/
+
+/*MOBILE SIZING*/ //////////////////////////////////
 .main-video {
   background-color: $black;
   height: 57.19vw;
@@ -10,7 +16,7 @@
     }
   }
 }
-/*TABLET SIZING*/
+/*TABLET SIZING*/ //////////////////////////////////
 @include medium {
   .main-video {
     display: flex;
@@ -22,6 +28,8 @@
     }
   }
 }
+/*ABOVE TABLET SIZING*/ //////////////////////////////////
+
 @include above-tablet {
   .main-video {
     height: 38vw;
@@ -32,7 +40,7 @@
   }
 }
 
-/*DESKTOP SIZING*/
+/*DESKTOP SIZING*/ //////////////////////////////////
 @include large {
   .main-video {
     height: 33.75rem;

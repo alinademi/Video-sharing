@@ -1,4 +1,10 @@
-/*MOBILE SIZING*/
+/*
+===================================================
+   INTRODUCTION TEXT UNDER MAIN VIDEO
+===================================================
+*/
+
+/*MOBILE SIZING*/ //////////////////////////////////
 .intro {
   padding: 2rem 1rem;
   background-color: $white;
@@ -39,7 +45,7 @@
     padding-top: 1.5rem;
   }
 }
-/*TABLET SIZING*/
+/*TABLET SIZING*/ //////////////////////////////////
 @include medium {
   .intro {
     padding: 3rem 1.5rem;
@@ -73,7 +79,7 @@
   }
 }
 
-/*DESKTOP SIZING*/
+/*DESKTOP SIZING*/ //////////////////////////////////
 @include large {
   .intro {
     // margin-left: 11.25rem;

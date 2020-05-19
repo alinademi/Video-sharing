@@ -1,3 +1,8 @@
+/*
+===================================================
+   MAIN VIDEO INTRODUCTION TEXT & STAT COMPONENT
+===================================================
+*/
 import React from "react";
 import Likes from "../assets/Icons/SVG/Icon-likes.svg";
 import Views from "../assets/Icons/SVG/Icon-views.svg";

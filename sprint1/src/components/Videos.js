@@ -1,3 +1,8 @@
+/*
+===================================================
+   SIDE VIDEOS (UP NEXT) COMPONENT
+===================================================
+*/
 import React from "react";
 
 const Videos = ({ sideVideos }) => {

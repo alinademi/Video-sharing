@@ -1,4 +1,10 @@
-/*MOBILE SIZING*/
+/*
+===================================================
+   POSTED COMMENTS
+===================================================
+*/
+
+/*MOBILE SIZING*/ //////////////////////////////////
 .comment__container {
   margin: 0 1rem;
 }
@@ -42,7 +48,7 @@
   flex-wrap: wrap;
   width: 72vw;
 }
-/*TABLET SIZING*/
+/*TABLET SIZING*/ //////////////////////////////////
 @include medium {
   .comment__container {
     margin: 0 1.5rem;
@@ -71,7 +77,7 @@
     }
   }
 }
-
+/*ABOVE TABLET SIZING*/ //////////////////////////////////
 @include above-tablet {
   .posted-comments {
     width: 100%;
@@ -80,7 +86,7 @@
     }
   }
 }
-/*DESKTOP SIZING*/
+/*DESKTOP SIZING*/ //////////////////////////////////
 @include large {
   .posted-comments {
     // margin-left: 11.25rem;

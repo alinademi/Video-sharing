@@ -1,3 +1,4 @@
+//IMPORTING FONTS/ //////////////////////////////////
 @font-face {
   font-family: "avenir-regular";
   src: url("../assets/Fonts/AvenirNextProLT/AvenirNextLTPro-Regular.otf");
@@ -33,7 +34,7 @@
   color: $black;
 }
 
-//////////////////tab/desk typography/////////////////
+//MIXINS FOR TYPOGRAPHY/ //////////////////////////////////
 @mixin hero-header {
   font-family: "avenir-bold";
   font-size: 3.75rem;

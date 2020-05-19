@@ -1,3 +1,10 @@
+/*
+===================================================
+   HEADER
+===================================================
+*/
+
+/*MOBILE SIZING*/ //////////////////////////////////
 .header {
   padding: 0 1rem 1rem 1rem;
   display: flex;
@@ -75,7 +82,7 @@
     }
   }
 }
-
+/*TABLET SIZING*/ //////////////////////////////////
 @include medium {
   .header {
     flex-direction: row;
@@ -109,12 +116,13 @@
     }
   }
 }
+/*ABOVE TABLET SIZING*/ //////////////////////////////////
 @include above-tablet {
   .header__container {
     max-width: 960px;
   }
 }
-
+/*DESKTOP SIZING*/ //////////////////////////////////
 @include large {
   .header {
     // padding: 0 11.25rem;

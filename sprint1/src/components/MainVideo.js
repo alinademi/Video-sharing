@@ -1,3 +1,8 @@
+/*
+===================================================
+   MAIN VIDEO COMPONENT
+===================================================
+*/
 import React from "react";
 import Video from "../assets/Video/BrainStation Sample Video.mp4";
 import Poster from "../assets/Images/video-list-0.jpg";

@@ -5,9 +5,9 @@ import MainVideo from "./components/MainVideo";
 import Videos from "./components/Videos";
 import Intro from "./components/Intro";
 import CommentsForm from "./components/CommentsForm";
-import PostedComments from "./components/PostedComments";
+import PostedComments from "./components/PostedComments"; //////////////////////////////////
 
-const comment = [
+/*DECLARING COMMENT ARRAY OF OBJECTS*/ const comment = [
   {
     name: "Michael Lyons",
     date: "01/14/2020",
@@ -29,6 +29,7 @@ const comment = [
 ];
 
 class App extends React.Component {
+  //Declaring video data as state
   state = {
     sideVideos: [
       {

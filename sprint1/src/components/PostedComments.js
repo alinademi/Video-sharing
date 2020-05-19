@@ -1,3 +1,8 @@
+/*
+===================================================
+   POSTED COMMENTS LIST COMPONENT
+===================================================
+*/
 import React from "react";
 
 const PostedComments = ({ postedComments }) => {

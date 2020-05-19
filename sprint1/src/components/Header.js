@@ -1,3 +1,8 @@
+/*
+===================================================
+   HEADER COMPONENT
+===================================================
+*/
 import React from "react";
 import Logo from "../assets/Logo/Logo-brainflix.svg";
 import Search from "../assets/Icons/SVG/Icon-search.svg";
