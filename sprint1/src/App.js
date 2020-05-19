@@ -70,12 +70,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <section>
         <Header />
         <MainVideo />
-        <div className="main-wrapper">
+        <section className="main-wrapper">
           <div>
             <Intro currentVideoInfo={this.state.currentVideo} />
+
             <CommentsForm />
             <ul className="comment__container">
               <PostedComments
@@ -87,8 +88,8 @@ class App extends React.Component {
           <aside className="upnext">
             <Videos sideVideos={this.state.sideVideos} />
           </aside>
-        </div>
-      </div>
+        </section>
+      </section>
     );
   }
 }

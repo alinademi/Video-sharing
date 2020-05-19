@@ -26,11 +26,34 @@
   text-decoration: none;
 }
 
+#root {
+  margin: 0 auto;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 @media only screen and (min-width: 1024px) {
   .main-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    max-width: 960px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .main-wrapper {
+    max-width: 1080px;
   }
 }
 
@@ -75,7 +98,8 @@
       -ms-flex-align: center;
           align-items: center;
   border-radius: 0.25rem;
-  border: 1px solid #e1e1e1;
+  border: 1.5px solid #e1e1e1;
+  background-color: #fafafa;
 }
 
 .header__search-icon {
@@ -88,8 +112,9 @@
 .header__search-field {
   resize: none;
   width: inherit;
-  height: 46.5px;
+  height: 44px;
   margin-right: 5px;
+  background-color: #fafafa;
   font-family: "avenir-demi";
   font-size: 0.875rem;
   line-height: 1.375rem;
@@ -120,9 +145,10 @@
   border: none;
   border-radius: 0.25rem;
   font-family: "avenir-regular";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: 0.781rem;
+  line-height: 1.1rem;
   color: #323232;
+  font-family: "avenir-demi";
   color: #ffffff;
 }
 
@@ -184,7 +210,6 @@
 
 @media only screen and (min-width: 1440px) {
   .header {
-    padding: 0 11.25rem;
     height: 5rem;
   }
 }
@@ -234,7 +259,7 @@
 
 /*MOBILE SIZING*/
 .intro {
-  padding: 2rem 1rem 2.5rem 1rem;
+  padding: 2rem 1rem;
   background-color: #ffffff;
 }
 
@@ -246,7 +271,7 @@
 }
 
 .intro__info {
-  padding: 1rem 0 2rem 0;
+  padding: 0.5rem 0 1.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,8 +289,8 @@
 
 .intro__date {
   font-family: "avenir-regular";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: 0.781rem;
+  line-height: 1.1rem;
   color: #323232;
   color: #afafaf;
   padding-left: 0.5rem;
@@ -297,8 +322,8 @@
 
 .intro__description {
   font-family: "avenir-regular";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: 0.781rem;
+  line-height: 1.1rem;
   color: #323232;
   padding-top: 1.5rem;
 }
@@ -356,7 +381,6 @@
 /*DESKTOP SIZING*/
 @media only screen and (min-width: 1440px) {
   .intro {
-    margin-left: 11.25rem;
     width: 44.5rem;
     padding-right: unset;
     padding-left: unset;
@@ -381,15 +405,16 @@
   font-size: 0.875rem;
   line-height: 1.375rem;
   color: #323232;
+  font-size: 1rem;
   color: #323232;
-  padding: 0 0 2rem 0;
+  padding: 0 0 1rem 0;
 }
 
 .comment-form__avatar {
   height: 3rem;
   width: 3rem;
   border-radius: 2rem;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   margin-right: 1rem;
   background-image: url(../assets/Images/Mohan-muruge.jpg);
   background-repeat: no-repeat;
@@ -407,18 +432,12 @@
 }
 
 .comment-form__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
   padding-bottom: 1.5rem;
   width: 14rem;
+}
+
+.comment-form__label {
+  font-family: "avenir-regular";
 }
 
 .comment-form__input {
@@ -429,9 +448,7 @@
   border: 2px solid #e1e1e1;
   padding: 0.625rem;
   font-family: "avenir-regular";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  color: #323232;
+  font-size: 0.875rem;
   line-height: 1.5rem;
   resize: none;
 }
@@ -455,7 +472,7 @@
   border-radius: 4px;
   border: none;
   font-size: 0.8125rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .comment-form__submit:focus {
@@ -535,7 +552,6 @@
 /*DESKTOP SIZING*/
 @media only screen and (min-width: 1440px) {
   .comment-form {
-    margin-left: 11.25rem;
     width: 44.5rem;
     padding: unset;
   }
@@ -572,8 +588,8 @@
 }
 
 .posted-comments__image {
-  height: 3rem;
-  min-width: 3rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
   background-color: #e1e1e1;
   border-radius: 2rem;
   -ms-flex-item-align: start;
@@ -584,7 +600,7 @@
 .posted-comments__name {
   font-size: 0.875rem;
   margin-right: auto;
-  padding-bottom: 1rem;
+  padding-bottom: 0.65rem;
   width: 49vw;
 }
 
@@ -595,6 +611,7 @@
 
 .posted-comments__comment {
   font-family: "avenir-regular";
+  letter-spacing: 1.2;
 }
 
 .posted-comments__container {
@@ -625,6 +642,7 @@
   }
   .posted-comments__name {
     margin: 0;
+    font-size: 1rem;
     padding-right: 1rem;
     width: unset;
   }
@@ -645,7 +663,6 @@
 /*DESKTOP SIZING*/
 @media only screen and (min-width: 1440px) {
   .posted-comments {
-    margin-left: 11.25rem;
     margin-right: unset;
     width: 44.5rem;
     padding-left: unset;
@@ -658,6 +675,12 @@
 
 .upnext {
   border-left: 1px solid #e1e1e1;
+}
+
+@media only screen and (min-width: 1024px) {
+  .upnext {
+    max-width: 33%;
+  }
 }
 
 /*MOBILE SIZING*/
@@ -673,11 +696,11 @@
 }
 
 .video__next {
-  font-family: "avenir-demi";
+  font-family: "avenir-regular";
   font-size: 0.75rem;
   line-height: 1.25rem;
   color: #afafaf;
-  padding: 2.5rem 0;
+  padding: 2rem 0;
 }
 
 .video__link {
@@ -708,8 +731,8 @@
 
 .video__sub-name {
   font-family: "avenir-regular";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: 0.781rem;
+  line-height: 1.1rem;
   color: #323232;
   font-size: 0.875rem;
 }
@@ -723,9 +746,6 @@
 
 /*DESKTOP SIZING*/
 @media only screen and (min-width: 1440px) {
-  .video {
-    padding-right: 11.25rem;
-  }
   .upnext {
     border-left: 2px solid #e1e1e1;
   }

@@ -15,8 +15,8 @@
   font-size: 0.8125rem;
 
   &__image {
-    height: 3rem;
-    min-width: 3rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
     background-color: $mercury;
     border-radius: 2rem;
     align-self: flex-start;
@@ -25,7 +25,7 @@
   &__name {
     font-size: 0.875rem;
     margin-right: auto;
-    padding-bottom: 1rem;
+    padding-bottom: 0.65rem;
     width: 49vw;
   }
   &__time {
@@ -34,6 +34,7 @@
   }
   &__comment {
     font-family: "avenir-regular";
+    letter-spacing: 1.2;
   }
 }
 .posted-comments__container {
@@ -55,6 +56,7 @@
 
     &__name {
       margin: 0;
+      font-size: 1rem;
       padding-right: 1rem;
       width: unset;
     }
@@ -73,7 +75,7 @@
 /*DESKTOP SIZING*/
 @include large {
   .posted-comments {
-    margin-left: 11.25rem;
+    // margin-left: 11.25rem;
     margin-right: unset;
     width: 44.5rem;
     padding-left: unset;

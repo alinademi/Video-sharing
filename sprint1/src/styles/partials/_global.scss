@@ -4,10 +4,20 @@
   box-sizing: border-box;
   font-weight: unset;
   text-decoration: none;
+  // border: 1px dashed lightblue;
 }
-
-@include above-tablet {
-  .main-wrapper {
-    display: flex;
+#root {
+  margin: 0 auto;
+}
+.main-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @include above-tablet {
+    max-width: 960px;
+    flex-direction: row;
+  }
+  @include large {
+    max-width: 1080px;
   }
 }

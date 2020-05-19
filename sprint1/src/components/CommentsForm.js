@@ -19,7 +19,7 @@ const CommentsForm = () => {
             name="comment"
             rows="10"
             cols="50"
-            placeholder="Add a new comment"
+            placeholder="Write comment here"
           ></textarea>
           {/* </div> */}
           {/* <div className="comment-form__submit-container"> */}

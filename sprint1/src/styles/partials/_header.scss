@@ -18,7 +18,8 @@
     justify-content: right;
     align-items: center;
     border-radius: 0.25rem;
-    border: 1px solid $mercury;
+    border: 1.5px solid $mercury;
+    background-color: $alabaster;
     &-icon {
       height: 1.125rem;
       width: 1.125rem;
@@ -28,8 +29,9 @@
     &-field {
       resize: none;
       width: inherit;
-      height: 46.5px;
+      height: 44px;
       margin-right: 5px;
+      background-color: $alabaster;
       @include mobile-sub-header;
       font-family: "avenir-regular";
       border: none;
@@ -49,6 +51,7 @@
       border: none;
       border-radius: 0.25rem;
       @include mobile-paragraph;
+      font-family: "avenir-demi";
       color: $white;
       &:focus {
         outline-width: 0;
@@ -103,7 +106,7 @@
 
 @include large {
   .header {
-    padding: 0 11.25rem;
+    // padding: 0 11.25rem;
     height: 5rem;
   }
 }

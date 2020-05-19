@@ -1,5 +1,8 @@
 .upnext {
   border-left: 1px solid $mercury;
+  @include above-tablet {
+    max-width: 33%;
+  }
 }
 /*MOBILE SIZING*/
 .video {
@@ -8,11 +11,11 @@
   padding: 0 1rem;
 
   &__next {
-    font-family: "avenir-demi";
+    font-family: "avenir-regular";
     font-size: 0.75rem;
     line-height: 1.25rem;
     color: $silver;
-    padding: 2.5rem 0;
+    padding: 2rem 0;
   }
   &__link {
     display: flex;
@@ -47,7 +50,7 @@
 /*DESKTOP SIZING*/
 @include large {
   .video {
-    padding-right: 11.25rem;
+    // padding-right: 11.25rem;
   }
   .upnext {
     border-left: 2px solid $mercury;

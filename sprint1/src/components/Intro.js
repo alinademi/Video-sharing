@@ -5,7 +5,7 @@ import Views from "../assets/Icons/SVG/Icon-views.svg";
 const Intro = ({ currentVideoInfo }) => {
   const currentVideo = currentVideoInfo.map((video, i) => {
     return (
-      <section key={i} className="intro">
+      <div key={i} className="intro">
         <div className="intro__wrapper">
           <h1 className="intro__title">{video.title}</h1>
           <div className="intro__container">
@@ -22,7 +22,7 @@ const Intro = ({ currentVideoInfo }) => {
           </div>
         </div>
         <p className="intro__description">{video.description}</p>
-      </section>
+      </div>
     );
   });
   return currentVideo;
