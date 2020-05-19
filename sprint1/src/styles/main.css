@@ -57,6 +57,13 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .main__column--right {
+    width: 66%;
+    padding-bottom: 2rem;
+  }
+}
+
 /*background image*/
 .header {
   padding: 0 1rem 1rem 1rem;
@@ -182,9 +189,20 @@
             flex-direction: row;
     height: 5rem;
     padding: 0 1.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1;
+            flex: 1 1;
   }
   .header__logo {
     margin-right: 10.5625rem;
@@ -208,9 +226,18 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .header__container {
+    max-width: 960px;
+  }
+}
+
 @media only screen and (min-width: 1440px) {
   .header {
     height: 5rem;
+  }
+  .header__container {
+    max-width: 1080px;
   }
 }
 
@@ -242,7 +269,17 @@
   }
   .main-video__video {
     height: 52.084vw;
-    width: 91.147vw;
+    width: 91vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-video {
+    height: 38vw;
+  }
+  .main-video__video {
+    height: 38vw;
+    width: 900px;
   }
 }
 
@@ -252,7 +289,7 @@
     height: 33.75rem;
   }
   .main-video__video {
-    width: 59rem;
+    width: 960px;
     height: 33.75rem;
   }
 }
@@ -551,6 +588,12 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .comment-form__input {
+    width: 20rem;
+  }
+}
+
 /*DESKTOP SIZING*/
 @media only screen and (min-width: 1440px) {
   .comment-form {
@@ -661,6 +704,15 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .posted-comments {
+    width: 100%;
+  }
+  .posted-comments__comment {
+    width: 100%;
+  }
+}
+
 /*DESKTOP SIZING*/
 @media only screen and (min-width: 1440px) {
   .posted-comments {
@@ -675,7 +727,7 @@
 }
 
 .upnext {
-  border-left: 1px solid #e1e1e1;
+  border-left: 2px solid #e1e1e1;
 }
 
 @media only screen and (min-width: 1024px) {

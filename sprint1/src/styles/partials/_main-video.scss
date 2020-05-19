@@ -18,16 +18,26 @@
     height: 52.084vw;
     &__video {
       height: 52.084vw;
-      width: 91.147vw;
+      width: 91vw;
     }
   }
 }
+@include above-tablet {
+  .main-video {
+    height: 38vw;
+    &__video {
+      height: 38vw;
+      width: 900px;
+    }
+  }
+}
+
 /*DESKTOP SIZING*/
 @include large {
   .main-video {
     height: 33.75rem;
     &__video {
-      width: 59rem;
+      width: 960px;
       height: 33.75rem;
     }
   }

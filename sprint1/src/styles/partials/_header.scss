@@ -5,6 +5,7 @@
   align-items: center;
   max-height: 180px;
   background-color: $white;
+
   &__logo-link {
     height: 3rem;
     display: flex;
@@ -80,7 +81,12 @@
     flex-direction: row;
     height: 5rem;
     padding: 0 1.5rem;
-    justify-content: space-between;
+    justify-content: center;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      flex: 1 1;
+    }
     &__logo {
       margin-right: 10.5625rem;
     }
@@ -103,10 +109,18 @@
     }
   }
 }
+@include above-tablet {
+  .header__container {
+    max-width: 960px;
+  }
+}
 
 @include large {
   .header {
     // padding: 0 11.25rem;
     height: 5rem;
+    &__container {
+      max-width: 1080px;
+    }
   }
 }

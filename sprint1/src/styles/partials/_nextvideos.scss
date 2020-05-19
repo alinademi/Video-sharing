@@ -1,5 +1,5 @@
 .upnext {
-  border-left: 1px solid $mercury;
+  border-left: 2px solid $mercury;
   @include above-tablet {
     max-width: 33%;
   }
@@ -50,6 +50,7 @@
     padding-bottom: 0.5rem;
   }
 }
+
 /*DESKTOP SIZING*/
 @include large {
   .video {

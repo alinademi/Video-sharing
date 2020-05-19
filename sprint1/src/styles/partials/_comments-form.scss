@@ -118,7 +118,13 @@
     }
   }
 }
-
+@include above-tablet {
+  .comment-form {
+    &__input {
+      width: 20rem;
+    }
+  }
+}
 /*DESKTOP SIZING*/
 @include large {
   .comment-form {

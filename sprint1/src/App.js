@@ -7,6 +7,27 @@ import Intro from "./components/Intro";
 import CommentsForm from "./components/CommentsForm";
 import PostedComments from "./components/PostedComments";
 
+const comment = [
+  {
+    name: "Michael Lyons",
+    date: "01/14/2020",
+    comment:
+      "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.",
+  },
+  {
+    name: "Gary Wong",
+    date: "01/01/2020",
+    comment:
+      "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
+  },
+  {
+    name: "Theodore Duncan",
+    date: "12/13/2019",
+    comment:
+      "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Every time I see him I feel instantly happy! He’s definitely my favorite ever!",
+  },
+];
+
 class App extends React.Component {
   state = {
     sideVideos: [
@@ -74,7 +95,7 @@ class App extends React.Component {
         <Header />
         <MainVideo />
         <section className="main-wrapper">
-          <div>
+          <div className="main__column--right">
             <Intro currentVideoInfo={this.state.currentVideo} />
 
             <CommentsForm />
@@ -94,24 +115,3 @@ class App extends React.Component {
   }
 }
 export default App;
-
-const comment = [
-  {
-    name: "Michael Lyons",
-    date: "01/14/2020",
-    comment:
-      "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.",
-  },
-  {
-    name: "Gary Wong",
-    date: "01/01/2020",
-    comment:
-      "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
-  },
-  {
-    name: "Theodore Duncan",
-    date: "12/13/2019",
-    comment:
-      "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Every time I see him I feel instantly happy! He’s definitely my favorite ever!",
-  },
-];

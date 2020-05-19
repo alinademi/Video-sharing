@@ -21,3 +21,9 @@
     max-width: 1080px;
   }
 }
+.main__column--right {
+  @include above-tablet {
+    width: 66%;
+    padding-bottom: 2rem;
+  }
+}
