@@ -331,7 +331,7 @@
 /*TABLET SIZING*/
 @media only screen and (min-width: 768px) {
   .intro {
-    padding: 3rem 1.5rem 4rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
   .intro__title {
     font-family: "avenir-bold";
@@ -349,9 +349,10 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 0.25rem 0 1rem;
   }
   .intro__info {
-    padding: 1.5rem 0;
+    padding: 0;
   }
   .intro__info-author {
     font-family: "avenir-demi";
@@ -367,13 +368,14 @@
     color: #afafaf;
   }
   .intro__counts {
-    padding: 1.5rem 0;
+    padding: 0;
   }
   .intro__description {
     font-family: "avenir-regular";
     font-size: 0.875rem;
     line-height: 1.375rem;
     color: #323232;
+    padding-top: 2rem;
     width: 33rem;
   }
 }
@@ -491,7 +493,7 @@
   .comment-form__count {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    padding: 0 0 2rem 0;
+    padding: 0 0 1.5rem;
     font-family: "avenir-demi";
     font-size: 1rem;
     line-height: 1.5rem;
@@ -648,7 +650,6 @@
   }
   .posted-comments__image {
     margin-right: 1rem;
-    min-width: 3rem;
   }
   .posted-comments__comment {
     width: 624px;
@@ -741,6 +742,9 @@
 @media only screen and (min-width: 768px) {
   .video__sub-title {
     width: 11rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding-bottom: 0.5rem;
   }
 }
 

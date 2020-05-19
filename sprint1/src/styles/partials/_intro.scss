@@ -42,7 +42,7 @@
 /*TABLET SIZING*/
 @include medium {
   .intro {
-    padding: 3rem 1.5rem 4rem 1.5rem;
+    padding: 3rem 1.5rem;
     &__title {
       @include h1-header;
     }
@@ -50,9 +50,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 0.25rem 0 1rem;
     }
     &__info {
-      padding: 1.5rem 0;
+      padding: 0;
       &-author {
         @include h3-sub-header;
       }
@@ -62,10 +63,11 @@
       color: $silver;
     }
     &__counts {
-      padding: 1.5rem 0;
+      padding: 0;
     }
     &__description {
       @include h4-paragraph;
+      padding-top: 2rem;
       width: 33rem;
     }
   }
