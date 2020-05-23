@@ -1,0 +1,134 @@
+/*
+===================================================
+   INTRODUCTION TEXT UNDER MAIN VIDEO
+===================================================
+*/
+
+/*MOBILE SIZING*/ //////////////////////////////////
+.main-video {
+  background-color: $black;
+  height: 57.19vw;
+  &__video {
+    width: 100%;
+    height: 57.19vw;
+    &:focus {
+      outline-width: 0;
+    }
+  }
+}
+//Custom video controls styling
+// https://codepen.io/Onomicon/pen/674eb76f709e76f57fcc25a410e3de56?editors=1100
+.video-player {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  &__video {
+    max-width: 100%;
+  }
+  &__controls {
+    position: absolute;
+    z-index: 99;
+    bottom: 0.365rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    padding: 0.625rem;
+    margin: 0 0.187rem;
+    border-radius: 0.187rem;
+    color: white;
+    background: rgba(black, 0.6);
+    border: unset;
+    box-shadow: unset;
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: pointer;
+      background: rgba(black, 1);
+      outline: 0;
+    }
+  }
+  &__btn-group {
+    display: flex;
+  }
+  &__progress-bar {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 0.187rem;
+    padding: 0.625rem;
+    border-radius: 0.187rem;
+    color: white;
+    background: rgba(black, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__progress-timeline {
+    height: 0.187rem;
+    margin-right: 0.625rem;
+    background: grey;
+    flex-grow: 1;
+  }
+  &__progress-scrubber {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    left: 0.624rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__progress-text {
+    text-align: center;
+  }
+}
+
+/*TABLET SIZING*/ //////////////////////////////////
+@include medium {
+  .main-video {
+    display: flex;
+    justify-content: center;
+    height: 52.084vw;
+    &__video {
+      height: 52.084vw;
+      width: 91vw;
+    }
+  }
+}
+/*ABOVE TABLET SIZING*/ //////////////////////////////////
+
+@include above-tablet {
+  .main-video {
+    height: 36vw;
+    &__video {
+      height: 36vw;
+      width: 920px;
+    }
+  }
+  .video-player {
+    max-width: 960px;
+    display: flex;
+    justify-content: center;
+    &__controls {
+      width: 75%;
+    }
+  }
+}
+/*DESKTOP SIZING*/ //////////////////////////////////
+@include large {
+  .main-video {
+    height: 33.75rem;
+    &__video {
+      width: 960px;
+      height: 33.75rem;
+    }
+  }
+  .video-player {
+    &__controls {
+      width: 90%;
+    }
+  }
+}

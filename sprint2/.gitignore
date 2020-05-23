@@ -1,0 +1,31 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# css map files
+*.css.map
+*.sass.map
+*.scss.map
+
+# testing
+coverage
+
+# production
+build
+
+#docs and resources 
+docs/*
+
+# misc
+
+.DS_Store
+.vscode
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
