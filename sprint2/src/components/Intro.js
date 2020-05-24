@@ -7,6 +7,10 @@ import React from "react";
 import Likes from "../assets/Icons/SVG/Icon-likes.svg";
 import Views from "../assets/Icons/SVG/Icon-views.svg";
 
+const date = (d) => {
+  return new Date(d).toLocaleDateString();
+};
+
 const Intro = ({ mainVideo }) => {
   const currentVideo = mainVideo.map((video, i) => {
     return (
@@ -16,7 +20,7 @@ const Intro = ({ mainVideo }) => {
           <div className="intro__container">
             <div className="intro__info">
               <h2 className="intro__author">By {video.channel}</h2>
-              <h4 className="intro__date">{video.timestamp}</h4>
+              <h4 className="intro__date">{date(video.timestamp)}</h4>
             </div>
             <div className="intro__counts">
               <img src={Views} className="intro__views" alt="Views" />
