@@ -2,25 +2,29 @@ import React from "react";
 import thumbnail from "../assets/Images/Upload-video-preview.jpg";
 const Upload = () => {
   return (
-    <div className="upload">
-      <div className="upload__margin">
-        <h1 className="upload__title">Upload Video</h1>
-        <form className="upload__flex">
+    <section className="upload">
+      <div className="upload__container">
+        <h1 className="upload__heading">Upload Video</h1>
+        <form className="upload__form">
           <div>
-            <h4 className="upload__description">VIDEO THUMBNAIL</h4>
-            <img className="upload__image" src={thumbnail} alt="thumbnail" />
+            <p className="upload__field-title">VIDEO THUMBNAIL</p>
+            <img
+              className="upload__video-thumbnail"
+              src={thumbnail}
+              alt="thumbnail"
+            />
           </div>
-          <div className="upload__flex-two">
-            <p className="upload__description">TITLE YOUR VIDEO</p>
+          <div className="upload__input-wrapper">
+            <p className="upload__field-title">TITLE YOUR VIDEO</p>
             <input
-              className="upload__form-title"
+              className="upload__title-input"
               name="title"
               placeholder="Add a title to your video"
               autoComplete="off"
             />
-            <p className="upload__description">ADD A VIDEO DESCRIPTION</p>
+            <p className="upload__field-title">ADD A VIDEO DESCRIPTION</p>
             <textarea
-              className="upload__form-description"
+              className="upload__description-input"
               name="description"
               rows="10"
               cols="50"
@@ -28,12 +32,12 @@ const Upload = () => {
             ></textarea>
           </div>
         </form>
-        <div className="upload__button-container">
+        <div className="upload__button-wrapper">
           <button className="upload__button-publish">PUBLISH</button>
           <button className="upload__button-cancel">CANCEL</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

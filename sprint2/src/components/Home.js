@@ -56,7 +56,7 @@ class Home extends React.Component {
   //HTML RENDER/RETURN
   render() {
     if (this.state.mainVideo.length === 0) {
-      return <div>Please wait for the video to display</div>;
+      return <div>Please wait for the video to display...</div>;
     }
     return (
       <section>
