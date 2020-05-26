@@ -16,11 +16,19 @@ class Home extends React.Component {
     comments: [],
     upNext: [],
   };
-
+  //
+  // MOUNTING RETRIEVED DATA
   componentDidMount() {
+    this.apiCall();
+  }
+  //
+  // STORING THE WHOLE REQUEST IN A VARIABLE TO BE ABLE TO PASS IT AS PROPS
+  // THIS CAN BE USED TO GET THE LATEST DATA AFTER CRUD OPERATIONS LIKE DELETE
+  // OR POST E.G COMMENTS.
+  apiCall = () =>
     axios.get(`${base_URL}${API_KEY}`).then((res) => {
       const upNext = res.data;
-
+      //RETRIEVING CURRENT VIDEO
       axios.get(`${base_URL}/${currentVideoId}${API_KEY}`).then((res) => {
         let sideVideos = upNext.filter(
           (video) => video.id !== { currentVideoId }
@@ -35,9 +43,8 @@ class Home extends React.Component {
         });
       });
     });
-  }
-
-  //SWITCHING VIDEOS
+  //
+  // SWITCHING MAIN VIDEO WITH ANOTHER FROM VIDEO LIST BASED ON ID
   componentDidUpdate(prevProps) {
     if (prevProps.match !== this.props.match) {
       axios
@@ -52,19 +59,23 @@ class Home extends React.Component {
         });
     }
   }
-
-  //HTML RENDER/RETURN
+  //
+  // HTML RENDER METHOD FOR THE RECEIVED DATA
   render() {
     if (this.state.mainVideo.length === 0) {
       return <div>Please wait for the video to display...</div>;
     }
     return (
       <section>
-        <MainVideo mainVideo={this.state.mainVideo[0].image} />
+        <MainVideo mainVideo={this.state.mainVideo[0]} />
         <section className="main-wrapper">
           <div className="main__column--right">
             <Intro mainVideo={this.state.mainVideo} />
-            <Comments comments={this.state.mainVideo[0].comments} />
+            <Comments
+              comments={this.state.mainVideo[0].comments}
+              commentId={this.state.mainVideo[0].id}
+              apiCall={this.apiCall}
+            />
           </div>
           <aside className="upnext">
             <Videos
