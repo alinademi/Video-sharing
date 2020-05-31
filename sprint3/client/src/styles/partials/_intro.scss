@@ -1,0 +1,93 @@
+/*
+===================================================
+   INTRODUCTION TEXT UNDER MAIN VIDEO
+===================================================
+*/
+
+/*MOBILE SIZING*/ //////////////////////////////////
+.intro {
+  padding: 2rem 1rem;
+  background-color: $white;
+  &__title {
+    @include mobile-header;
+  }
+  &__info {
+    padding: 0.5rem 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+  &__author {
+    @include mobile-sub-header;
+  }
+  &__date {
+    @include mobile-paragraph;
+    color: $silver;
+    padding-left: 0.5rem;
+  }
+
+  &__counts {
+    display: flex;
+    @include mobile-sub-header;
+    font-family: "avenir-regular";
+    padding-bottom: 1.5rem;
+  }
+  &__views-num {
+    padding: 0 1rem 0 0.5rem;
+  }
+  &__likes-num {
+    padding-left: 0.5rem;
+  }
+  &__wrapper {
+    border-bottom: 2px solid $mercury;
+  }
+  &__description {
+    @include mobile-paragraph;
+    padding-top: 1.5rem;
+  }
+}
+/*TABLET SIZING*/ //////////////////////////////////
+@include medium {
+  .intro {
+    padding: 3rem 1.5rem;
+    &__title {
+      @include h1-header;
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.25rem 0 1rem;
+    }
+    &__info {
+      padding: 0;
+      &-author {
+        @include h3-sub-header;
+      }
+    }
+    &__date {
+      @include h4-paragraph;
+      color: $silver;
+    }
+    &__counts {
+      padding: 0;
+    }
+    &__description {
+      @include h4-paragraph;
+      padding-top: 2rem;
+      width: 33rem;
+    }
+  }
+}
+
+/*DESKTOP SIZING*/ //////////////////////////////////
+@include large {
+  .intro {
+    // margin-left: 11.25rem;
+    width: 44.5rem;
+    padding-right: unset;
+    padding-left: unset;
+    &__likes-num {
+      padding-right: 2rem;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+/*
+===================================================
+   comment fom
+===================================================
+*/
+
+/*MOBILE SIZING*/ //////////////////////////////////
+.comment-form {
+  background-color: $white;
+  padding: 0 1rem;
+  font-family: "avenir-demi";
+  color: $silver;
+  line-height: 1.25rem;
+  font-size: 0.75rem;
+  &__count {
+    @include mobile-sub-header;
+    font-size: 1rem;
+    color: $black;
+    padding: 0 0 1rem 0;
+  }
+  &__avatar {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 2rem;
+    margin-top: 1.25rem;
+    margin-right: 1rem;
+    background-image: url(../assets/Images/Mohan-muruge.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__title-wrapper {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid $mercury;
+  }
+  &__form {
+    padding-bottom: 1.5rem;
+    width: 14rem;
+  }
+  &__label {
+    font-family: "avenir-regular";
+  }
+  &__input {
+    width: 14rem;
+    height: 6rem;
+    background-color: $alabaster;
+    border-radius: 0.25rem;
+    border: 2px solid $mercury;
+    padding: 0.625rem;
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    resize: none;
+  }
+  &__input:focus {
+    border: 2px solid $brainflixblue;
+    outline-width: 0;
+  }
+  &__submit-container {
+    align-self: flex-end;
+  }
+  &__submit {
+    background-color: $brainflixblue;
+    color: $white;
+    font-family: "avenir-demi";
+    height: 3rem;
+    width: 14rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 0.8125rem;
+    margin-top: 0.5rem;
+    &:focus {
+      outline-width: 0;
+    }
+    &:hover {
+      background-color: $brainflixblue-dark;
+    }
+  }
+}
+
+/*TABLET SIZING*/ //////////////////////////////////
+@include medium {
+  .comment-form {
+    padding: 0 1.5rem 0 1.5rem;
+    &__count {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      padding: 0 0 1.5rem;
+      @include h3-sub-header;
+    }
+    &__avatar {
+      margin-right: 1.25rem;
+      margin-top: unset;
+      align-self: flex-end;
+    }
+    &__title-wrapper {
+      justify-content: left;
+      align-items: center;
+      padding-bottom: 1.5rem;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: unset;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+    &__input {
+      height: 3rem;
+      width: 27.5rem;
+      margin: unset;
+    }
+    &__submit {
+      width: 160px;
+
+      margin-left: 1rem;
+      margin-top: 0;
+    }
+    &__label {
+      flex-basis: 100%;
+    }
+  }
+}
+
+/*ABOVE TABLET SIZING*/ //////////////////////////////////
+@include above-tablet {
+  .comment-form {
+    &__input {
+      width: 20rem;
+    }
+  }
+}
+
+/*DESKTOP SIZING*/ //////////////////////////////////
+@include large {
+  .comment-form {
+    // margin-left: 11.25rem;
+    width: 44.5rem;
+    padding: unset;
+
+    &__input-title {
+      width: 436px;
+    }
+    &__input {
+      width: 436px;
+    }
+  }
+}

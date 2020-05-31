@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: unset;
+  text-decoration: none;
+  // border: 1px dashed lightblue;
+}
+#root {
+  margin: 0 auto;
+}
+.main-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @include above-tablet {
+    max-width: 960px;
+    flex-direction: row;
+  }
+  @include large {
+    max-width: 1080px;
+  }
+}
+.main__column--right {
+  @include above-tablet {
+    width: 66%;
+    padding-bottom: 2rem;
+  }
+}
