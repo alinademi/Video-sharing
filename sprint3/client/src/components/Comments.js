@@ -15,7 +15,7 @@ export default function Comments(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const comment = {
-      name: "BrainStation Man",
+      name: "User",
       comment: e.target.comment.value,
     };
     //SENDING COMMENTS TO API
@@ -65,7 +65,7 @@ export default function Comments(props) {
                 <div className="posted-comments__container">
                   <h2 className="posted-comments__name">{comment.name}</h2>
                   <div className="posted-comments__time">
-                    {moment(comment.timestamp).startOf("minutes").fromNow()}
+                    {moment(comment.timestamp).startOf("seconds").fromNow()}
                   </div>
                   <p className="posted-comments__comment">{comment.comment}</p>
                 </div>

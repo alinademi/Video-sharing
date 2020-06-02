@@ -55,4 +55,38 @@ router.post("/", (req, res) => {
   helper.writeJSONFile(data, videos);
   res.json(videos);
 });
+
+//ROUTE FOR POSTING COMMENT BY SELECTING SPECIFIC VIDEO BY ID
+router.post("/:id/comments", (req, res) => {
+  const video = videos.find((video) => {
+    return video.id === req.params.id;
+  });
+  console.log(video);
+  if (video) {
+    const newComment = {
+      id: helper.getNewId(),
+      name: req.body.name,
+      comment: req.body.comment,
+      timestamp: new Date().getTime(),
+    };
+    if (!newComment.name || !newComment.comment) {
+      return res.status(400).json({
+        errorMessage: " Please fill in all the fields",
+      });
+    }
+    //ADDING A NEW COMMENT TO THE ARRAY OF COMMENTS BY ID
+    video.comments.push(newComment);
+    videos.forEach((newVideo) => {
+      if (newVideo.id === video.id) {
+        newVideo = video;
+      }
+    });
+    helper.writeJSONFile(data, videos);
+    res.json(video);
+  } else {
+    res.status(404).json({
+      error: `Sorry!! The video ${req.params.id} not found`,
+    });
+  }
+});
 module.exports = router;

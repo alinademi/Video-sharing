@@ -40,7 +40,7 @@ class MainVideo extends React.Component {
               </div>
             </div>
             <div className="video-player__btn-group">
-              <button className="video-player__bt">
+              <button className="video-player__btn">
                 <img src={Fullscreen} alt="Fullscreen control" />
               </button>
               <button className="video-player__btn">
