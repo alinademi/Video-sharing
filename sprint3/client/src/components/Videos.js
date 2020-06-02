@@ -23,6 +23,7 @@ const Videos = ({ sideVideos }) => {
       </Link>
     );
   });
+
   return (
     <div className="video">
       <h4 className="video__next">NEXT VIDEO</h4>

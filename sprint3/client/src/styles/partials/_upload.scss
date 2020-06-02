@@ -107,6 +107,7 @@
       padding: 2.5rem 0 10rem;
       display: flex;
       flex-direction: row-reverse;
+      flex-basis: 100%;
     }
     &__button-publish {
       width: 10rem;
@@ -126,6 +127,7 @@
     }
     &__form {
       display: flex;
+      flex-wrap: wrap;
       // flex-direction: row;
     }
     &__input-wrapper {
