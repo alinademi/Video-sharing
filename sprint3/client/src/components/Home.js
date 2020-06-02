@@ -5,8 +5,7 @@ import Comments from "./Comments";
 import Videos from "./Videos";
 import axios from "axios";
 
-const API_KEY = "?api_key=ff56bb61-7021-48f0-8297-e241d5d54256";
-const base_URL = "https://project-2-api.herokuapp.com/videos";
+const base_URL = "http://localhost:5000/api/video";
 const currentVideoId = "1af0jruup5gu";
 
 class Home extends React.Component {
@@ -15,6 +14,7 @@ class Home extends React.Component {
     mainVideo: [],
     comments: [],
     upNext: [],
+    isLoading: true,
   };
   //
   // MOUNTING RETRIEVED DATA
@@ -26,20 +26,31 @@ class Home extends React.Component {
   // THIS CAN BE USED TO GET THE LATEST DATA AFTER CRUD OPERATIONS LIKE DELETE
   // OR POST E.G COMMENTS.
   apiCall = () =>
-    axios.get(`${base_URL}${API_KEY}`).then((res) => {
+    axios({
+      method: "get",
+      url: `${base_URL}`,
+      headers: { "Access-Control-Allow-Origin": "*" },
+    }).then((res) => {
       const upNext = res.data;
+
       //RETRIEVING CURRENT VIDEO
-      axios.get(`${base_URL}/${currentVideoId}${API_KEY}`).then((res) => {
+
+      axios({
+        method: "get",
+        url: `${base_URL}/${currentVideoId}`,
+        headers: { "Access-Control-Allow-Origin": "*" },
+      }).then((res) => {
         let sideVideos = upNext.filter(
           (video) => video.id !== { currentVideoId }
         );
         const mainVideo = res.data;
         const comments = res.data.comments;
         this.setState({
-          sideVideos,
+          sideVideos: [sideVideos],
           mainVideo: [mainVideo],
-          comments,
-          upNext,
+          comments: [comments],
+          upNext: [upNext],
+          isLoading: false,
         });
       });
     });
@@ -47,16 +58,14 @@ class Home extends React.Component {
   // SWITCHING MAIN VIDEO WITH ANOTHER FROM VIDEO LIST BASED ON ID
   componentDidUpdate(prevProps) {
     if (prevProps.match !== this.props.match) {
-      axios
-        .get(`${base_URL}/${this.props.match.params.id}${API_KEY}`)
-        .then((res) => {
-          const mainVideo = res.data;
-          const comments = res.data.comments;
-          let sideVideos = this.state.upNext.filter(
-            (video) => video.id !== this.props.match.params.id
-          );
-          this.setState({ sideVideos, mainVideo: [mainVideo], comments });
-        });
+      axios.get(`${base_URL}/${this.props.match.params.id}`).then((res) => {
+        const mainVideo = res.data;
+        const comments = res.data.comments;
+        let sideVideos = this.state.upNext.filter(
+          (video) => video.id !== this.props.match.params.id
+        );
+        this.setState({ sideVideos, mainVideo: [mainVideo], comments });
+      });
     }
   }
   //
@@ -75,6 +84,7 @@ class Home extends React.Component {
               comments={this.state.mainVideo[0].comments}
               commentId={this.state.mainVideo[0].id}
               apiCall={this.apiCall}
+              isLoading={this.state.isLoading}
             />
           </div>
           <aside className="upnext">
