@@ -28,56 +28,51 @@ export default function Comments(props) {
 
     e.target.reset();
   };
-  if (!props.isLoading) {
-    return (
-      <>
-        <div className="comment-form">
-          <h3 className="comment-form__count">
-            {props.comments.length} Comments
-          </h3>
-          <div className="comment-form__title-wrapper">
-            <div className="comment-form__avatar"></div>
-            <form className="comment-form__form" onSubmit={handleSubmit}>
-              <label className="comment-form__label" htmlFor="comment">
-                JOIN THE CONVERSATION
-              </label>
-              <br />
-              <textarea
-                className="comment-form__input"
-                name="comment"
-                rows="10"
-                cols="50"
-                placeholder="Write comment here"
-              ></textarea>
-              <button className="comment-form__submit">COMMENT</button>
-            </form>
-          </div>
+
+  return (
+    <>
+      <div className="comment-form">
+        <h3 className="comment-form__count">
+          {props.comments.length} Comments
+        </h3>
+        <div className="comment-form__title-wrapper">
+          <div className="comment-form__avatar"></div>
+          <form className="comment-form__form" onSubmit={handleSubmit}>
+            <label className="comment-form__label" htmlFor="comment">
+              JOIN THE CONVERSATION
+            </label>
+            <br />
+            <textarea
+              className="comment-form__input"
+              name="comment"
+              rows="10"
+              cols="50"
+              placeholder="Write comment here"
+            ></textarea>
+            <button className="comment-form__submit">COMMENT</button>
+          </form>
         </div>
-        <ul className="comment__container">
-          {props.comments
-            .sort((a, b) => {
-              return b.timestamp - a.timestamp;
-            })
-            .map((comment) => {
-              return (
-                <li key={comment.id} className="posted-comments">
-                  <div className="posted-comments__image"></div>
-                  <div className="posted-comments__container">
-                    <h2 className="posted-comments__name">{comment.name}</h2>
-                    <div className="posted-comments__time">
-                      {moment(comment.timestamp).startOf("minutes").fromNow()}
-                    </div>
-                    <p className="posted-comments__comment">
-                      {comment.comment}
-                    </p>
+      </div>
+      <ul className="comment__container">
+        {props.comments
+          .sort((a, b) => {
+            return b.timestamp - a.timestamp;
+          })
+          .map((comment) => {
+            return (
+              <li key={comment.id} className="posted-comments">
+                <div className="posted-comments__image"></div>
+                <div className="posted-comments__container">
+                  <h2 className="posted-comments__name">{comment.name}</h2>
+                  <div className="posted-comments__time">
+                    {moment(comment.timestamp).startOf("minutes").fromNow()}
                   </div>
-                </li>
-              );
-            })}
-        </ul>
-      </>
-    );
-  } else {
-    return <h1>Loading ...</h1>;
-  }
+                  <p className="posted-comments__comment">{comment.comment}</p>
+                </div>
+              </li>
+            );
+          })}
+      </ul>
+    </>
+  );
 }

@@ -5,7 +5,7 @@ import Comments from "./Comments";
 import Videos from "./Videos";
 import axios from "axios";
 
-const base_URL = "http://localhost:5000/api/video";
+const base_URL = "/api/video";
 const currentVideoId = "1af0jruup5gu";
 
 class Home extends React.Component {
@@ -14,7 +14,6 @@ class Home extends React.Component {
     mainVideo: [],
     comments: [],
     upNext: [],
-    isLoading: true,
   };
   //
   // MOUNTING RETRIEVED DATA
@@ -26,31 +25,20 @@ class Home extends React.Component {
   // THIS CAN BE USED TO GET THE LATEST DATA AFTER CRUD OPERATIONS LIKE DELETE
   // OR POST E.G COMMENTS.
   apiCall = () =>
-    axios({
-      method: "get",
-      url: `${base_URL}`,
-      headers: { "Access-Control-Allow-Origin": "*" },
-    }).then((res) => {
+    axios.get(`${base_URL}`).then((res) => {
       const upNext = res.data;
-
       //RETRIEVING CURRENT VIDEO
-
-      axios({
-        method: "get",
-        url: `${base_URL}/${currentVideoId}`,
-        headers: { "Access-Control-Allow-Origin": "*" },
-      }).then((res) => {
+      axios.get(`${base_URL}/${currentVideoId}`).then((res) => {
         let sideVideos = upNext.filter(
           (video) => video.id !== { currentVideoId }
         );
         const mainVideo = res.data;
         const comments = res.data.comments;
         this.setState({
-          sideVideos: [sideVideos],
+          sideVideos,
           mainVideo: [mainVideo],
-          comments: [comments],
-          upNext: [upNext],
-          isLoading: false,
+          comments,
+          upNext,
         });
       });
     });
@@ -76,21 +64,20 @@ class Home extends React.Component {
     }
     return (
       <section>
-        <MainVideo mainVideo={this.state.mainVideo[0]} />
+        <MainVideo mainVideo={this.state.mainVideo[0][0]} />
         <section className="main-wrapper">
           <div className="main__column--right">
-            <Intro mainVideo={this.state.mainVideo} />
+            <Intro mainVideo={this.state.mainVideo[0]} />
             <Comments
-              comments={this.state.mainVideo[0].comments}
-              commentId={this.state.mainVideo[0].id}
+              comments={this.state.mainVideo[0][0].comments}
+              commentId={this.state.mainVideo[0][0].id}
               apiCall={this.apiCall}
-              isLoading={this.state.isLoading}
             />
           </div>
           <aside className="upnext">
             <Videos
               sideVideos={this.state.sideVideos}
-              mainVideo={this.state.mainVideo}
+              mainVideo={this.state.mainVideo[0]}
             />
           </aside>
         </section>
